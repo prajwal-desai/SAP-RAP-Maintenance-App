@@ -1,0 +1,20 @@
+@EndUserText.label : 'Maintenance Request Header'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zrap_mreq_h {
+
+  key client      : abap.clnt not null;
+  key req_uuid    : sysuuid_x16 not null;
+  request_id      : abap.char(10);
+  equipment_name  : abap.char(50);
+  @Semantics.amount.currencyCode : 'zrap_mreq_h.currency'
+  total_cost      : abap.curr(15,2);
+  currency        : waers;
+  status          : abap.char(1);
+  created_by      : syuname;
+  created_at      : tzntstmps;
+  last_changed_at : tzntstmps;
+
+}

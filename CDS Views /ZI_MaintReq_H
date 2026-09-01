@@ -1,0 +1,24 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Maintenance Header View'
+define root view entity ZI_MaintReq_H 
+  as select from zrap_mreq_h
+  composition [0..*] of ZI_MaintReq_I as _Parts
+{
+  key req_uuid as ReqUuid,
+  request_id as RequestId,
+  equipment_name as EquipmentName,
+  @Semantics.amount.currencyCode: 'Currency'
+  total_cost as TotalCost,
+  currency as Currency,
+  status as Status,
+  
+  @Semantics.user.createdBy: true
+  created_by as CreatedBy,
+  @Semantics.systemDateTime.createdAt: true
+  created_at as CreatedAt,
+  @Semantics.systemDateTime.localInstanceLastChangedAt: true
+  last_changed_at as LastChangedAt,
+  
+ 
+  _Parts
+}

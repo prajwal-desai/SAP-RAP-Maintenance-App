@@ -3,6 +3,7 @@
 ## Screenshots
 
 <img width="1892" height="907" alt="Screenshot1" src="https://github.com/user-attachments/assets/9b5c56ba-9788-4b0d-983d-924529e81609" />
+<img width="1906" height="902" alt="Screenshot2" src="https://github.com/user-attachments/assets/ed4a5d64-5858-4a0f-b079-c00719687171" />
 
 
 ## Overview
